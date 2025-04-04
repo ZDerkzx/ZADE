@@ -16,7 +16,7 @@ func RnCommand(commands string, pause int) {
 		Cmd := exec.Command("cmd", "/C", value)
 		err := Cmd.Run()
 		if err != nil {
-			fmt.Println("Error ejecutando el comando:")
+			fmt.Println("Error ejecutando el comando:",err)
 		}
 		time.Sleep(time.Duration(pause) * time.Second)
 	}
